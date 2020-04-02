@@ -14,7 +14,7 @@
     <div class="list-article p-3">
       <div class="d-flex">
         <div class="col-md-2">
-          <%= cl_image_tag @article.photo.key if article.photo.attached? %>
+          <%= cl_image_tag article.photo.key if article.photo.attached? %>
         </div>
         <div class="col-md-6">
           <div class="title-text-article">
