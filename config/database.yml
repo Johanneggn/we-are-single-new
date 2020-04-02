@@ -83,3 +83,5 @@ production:
   database: we-are-single-new_production
   username: we-are-single-new
   password: <%= ENV['WE-ARE-SINGLE-NEW_DATABASE_PASSWORD'] %>
+  production:
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
