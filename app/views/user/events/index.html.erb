@@ -1,0 +1,49 @@
+<div class="user-index-events">
+  <div class="d-flex">
+    <div class="col-md-11">
+    <h1 class="pl-4">Les évènements</h1>
+    </div>
+    <div class="col-md-1">
+      <%= link_to new_event_path, class: "action-navbar" do %>
+        <p class="add-event text-center my-2">+</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="container-user-index-events">
+    <% @events.each do |event| %>
+      <div class="list-user-index-events">
+        <div class="d-flex event-list-user-index">
+          <div class="col-md-3">
+            <%= link_to event_path(event), class: "list-text-index" do %>
+              <div class="title-event-user-index">
+                <h2 class="pl-3"><%= event.title %></h2>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <div class="date-event-user-index">
+              <p><%= l(event.start_date, format: '%d %B %Y') %> - <%= l(event.end_date, format: '%d %B %Y') %></p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="event-address-user-index">
+              <p><%= event.address %></p>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center">
+            <div class="update-index-event-user">
+              <%= link_to edit_event_path(event), class: "list-text-index" do  %>
+                <i class="fas fa-pen p-3"></i>
+              <% end %>
+            </div>
+            <div class="destroy-index-event-user">
+              <%= link_to event_path(event), method: 'delete', class: "list-text-index" do  %>
+                <i class="fas fa-trash-alt p-3"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

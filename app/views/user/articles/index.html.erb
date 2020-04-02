@@ -1,0 +1,44 @@
+<div class="all-index-articles p-5">
+  <div class="d-flex p-3">
+    <div class="col-md-11">
+      <h1 class="pl-4">Les actualités</h1>
+    </div>
+    <div class="col-md-1">
+      <%= link_to new_article_path, class: "action-navbar" do %>
+        <p class="add-event text-center">+</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="list-index-articles">
+    <% @articles.each do |article| %>
+    <div class="list-article p-3">
+      <div class="d-flex">
+        <div class="col-md-2">
+          <%= cl_image_tag @article.photo.key if article.photo.attached? %>
+        </div>
+        <div class="col-md-6">
+          <div class="title-text-article">
+            <h2><%= article.title %></h2>
+            <p><%= article.description %></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <p>publié le <%= l(article.created_at,format: '%d %B %Y') %></p>
+        </div>
+        <div class="col-md-2 d-flex justify-content-center">
+          <div class="update-index-event-user">
+            <%= link_to user_events_path, class: "list-text-index" do  %>
+              <i class="fas fa-pen p-3"></i>
+            <% end %>
+          </div>
+          <div class="destroy-index-event-user">
+            <%= link_to article_path(article), method: 'delete', class: "list-text-index" do %>
+              <i class="fas fa-trash-alt p-3"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

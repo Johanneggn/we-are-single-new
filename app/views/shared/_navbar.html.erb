@@ -1,34 +1,53 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+<div class="navbar navbar-expand-sm navbar-light">
+  <%= link_to '/', class: "navbar-brand" do %>
+    <%= image_tag("was-logo-page-001-3.jpg", crop: :thumb, width: 250, height: 100) %>
+  <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="container-navbar w-100" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <% if user_signed_in? %>
+            <div class="col-md-3">
+              <%= link_to user_events_path, class: "action-navbar" do%>
+                <p class="text-center my-2">Les évènements</p>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to user_articles_path, class: "action-navbar" do %>
+                <p class="text-center my-2">Les actualités</p>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to clients_path, class: "action-navbar" do %>
+                <p class="text-center my-2">Les abonnements</p>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to destroy_user_session_path, method: :delete, class: "action-navbar" do %>
+                <p class="text-center my-2">Se Déconnecter</p>
+              <% end %>
+            </div>
+        <% else %>
+
+        <div class="nav-item w-100">
+          <div class="d-flex">
+          <div class="col-md-4">
+            <%= link_to events_path, class: "nav-link text-center" do %>
+              <p class="text-center my-2">Les évènements</p>
+            <% end %>
           </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+          <div class="col-md-4">
+            <%= link_to articles_path, class: "nav-link text-center" do %>
+              <p class="text-center my-2">Les actualités</p>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to who_events_path, class: "nav-link text-center" do %>
+            <p class="text-center my-2">Qui sommes-nous? </p>
+            <% end %>
+          </div>
+          </div>
+        </div>
+
       <% end %>
     </ul>
   </div>

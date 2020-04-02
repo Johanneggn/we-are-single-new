@@ -1,2 +1,120 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home">
+  <div class="photo-cover d-flex">
+    <div class="col-md-6 d-flex align-items-center">
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="catch-phrase-home pl-5">
+        <h1 class= "catch-phrase">Recontrez,</h1>
+        <h1 class= "catch-phrase">Découvrez,</h1>
+        <h1 class= "catch-phrase">Profitez</h1>
+      </div>
+    </div>
+  </div>
+  <div class="icone-presentation">
+    <div class="d-flex">
+      <div class="col-md-3">
+        <div class="picto d-flex justify-content-center">
+          <i class="fas fa-map-marker-alt picto-position"></i>
+        </div>
+          <p class="text-center pt-2">Près de chez vous</p>
+      </div>
+      <div class="col-md-3">
+        <div class="picto d-flex justify-content-center">
+          <i class="fas fa-venus-mars"></i>
+        </div>
+          <p class="text-center pt-2">parité homme/femme</p>
+      </div>
+      <div class="col-md-3">
+        <div class="picto d-flex justify-content-center">
+          <p class="picto-30">+30</p>
+        </div>
+          <p class="text-center pt-2">Célibataires de plus de 30 ans</p>
+      </div>
+      <div class="col-md-3">
+        <div class="picto d-flex justify-content-center">
+          <i class="fas fa-glass-cheers"></i>
+        </div>
+          <p class="text-center pt-2">Soirée dansante</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="presentation-was-home-page d-flex my-5">
+    <div class="col-md-6">
+      <div class="text-presentaion ml-4">
+      <h1 class="pl-4 py-3">We Are Single</h1>
+        <p class="pl-4">We Are Single, c’est l’organisation d’événements dédiés aux célibataires de plus de 30 ans près de chez vous.
+        Découvrez les soirées WAS,  et faites des rencontres dans une ambiance conviviale et festive !
+        Faites aussi des rencontres lors de nos autres événements pour célibataires : speed-datings, initiation salsa, randonnées…</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="photo-presentation">
+        <%= image_tag("photo-couple-presentation-was.jpg", crop: :thumb, width: 500, height: 300) %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="presentation-soirees-home-page d-flex py-3 my-4">
+    <div class="col-md-5">
+      <div class="photo-soiree py-4 pl-5">
+        <%= image_tag("presentation-soiree.jpg", crop: :thumb, width: 500, height: 300) %>
+      </div>
+    </div>
+    <div class="col-md-7 pr-5">
+      <div class="title-presentation-soirees-home-page">
+          <h1 class="py-3 px-3">Soirée Spécial Célibataire</h1>
+      </div>
+
+      <p class="px-4">Dédiées exclusivement aux plus de 30 ans, les soirées WAS sont un excellent moyen de faire des rencontres et peut-être de trouver l’amour.</p>
+        <li class="px-4">Soirée dansante animée</li>
+        <li class="px-4">Apéritif dinatoire inclus</li>
+        <li class="px-4">Ambiance conviviale avec des jeux pour briser la glace.</li>
+        <br>
+        <p class= "px-4">L’occasion de rencontrer l’amour ou de faire la fête entre célibataires !</p>
+    </div>
+  </div>
+  <div class="list-events-home-page">
+    <h1 class="pb-4 px-5 my-0">Les évènements</h1>
+    <div class="container-index-event d-flex row mb-5 justify-content-center">
+      <% if @eventsall.count == 0 %>
+        <p class="px-5">Il n'y a pas d'évènement actuellement.</p>
+      <% else %>
+        <% @eventsthird.each do |event| %>
+          <div class="col-md-4 col-xl-3">
+            <%= link_to event_path(event), class: "link-to-show" do  %>
+              <div class="card-event">
+                <% if event.kind == "Soirée" %>
+                  <%= image_tag("photo-event-party.jpg", crop: :thumb, width: 400, height: 220, class: "photo-event-index") %>
+                <% else %>
+                  <%= image_tag("photo-event-other.jpg", crop: :thumb, width: 400, height: 220, class: "photo-event-index") %>
+                <% end %>
+                  <div class="info-card-event">
+                    <p class="index-title-event text-center"><%= event.title %></p>
+                    <div class="location-event d-flex">
+                      <i class="fas fa-map-marker-alt px-2 pt-2"></i><p class="m-0"><%= event.address %></p>
+                    </div>
+                    <div class="date-event d-flex">
+                      <% if event.start_date == event.end_date %>
+                        <p class="pl-4"><%= l(event.start_date, format: '%d %B %Y') %></p>
+                      <% else %>
+                        <p class="pl-4"><%= l(event.start_date, format: '%d %B') %> - <%= l(event.end_date, format: '%d %B %Y') %></p>
+                      <% end %>
+                    </div>
+                  </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+        <%= link_to events_path, class: "link-to-show" do  %>
+          <div class="card-event d-flex align-items-center justify-content-center">
+            <div class="display-index-events">
+              <p class="px-3 text-center">Afficher la liste des évènements</p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

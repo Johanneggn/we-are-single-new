@@ -1,0 +1,31 @@
+<div class="all-form-article p-5">
+  <div class="container article-form">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <div class="form-post mb-5">
+          <h1 class="mt-3 mb-5">Créer un article</h1>
+          <%= simple_form_for @article do |f| %>
+            <%= f.input :title,
+                        as: :string,
+                        label: 'Titre',
+                        placeholder: 'Titre de l\'article' %>
+            <%= f.input :description,
+                        as: :string,
+                        label: 'description',
+                        placeholder: "Ajouter une description à l'article" %>
+            <%= f.input :text,
+                        as: :text,
+                        label: 'Texte',
+                        placeholder: "Ajouter un texte à l'article" %>
+
+            <%= f.input :photo, as: :file %>
+
+            <div class="d-flex flex-row-reverse mt-4">
+              <%= f.submit "Créer", class: 'pho-btn' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

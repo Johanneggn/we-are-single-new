@@ -1,0 +1,32 @@
+<div class="all-clients">
+  <div class="client-index">
+    <h1 class="ml-5 pt-4">Liste des abonnés</h1>
+    <div class="list-clients-newsletter m-5">
+      <% @clients.each do |client| %>
+        <div class="info-client m-1 p-2">
+          <div class="d-flex">
+            <div class="col-md-3">
+              <div class="d-flex">
+                <h2 class="pl-3"><%= client.first_name %></h2>
+                <h2 class="pl-3"><%= client.last_name %></h2>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p><%= client.email %></p>
+            </div>
+            <div class="col-md-2">
+              <p><%= l(client.birthdate, format: '%d %B %Y') %></p>
+            </div>
+            <div class="col-md-2">
+              <p><%= client.gender %></p>
+            </div>
+            <div class="col-md-2">
+            <p><%= l(client.created_at, format: '%d %B %Y')%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
