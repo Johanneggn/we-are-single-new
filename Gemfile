@@ -17,7 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'geocoder'
 gem 'rails-i18n', '~> 5.1'
-gem 'cloudinary', '~> 1.9.1'
+gem 'cloudinary', '~> 1.12'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
