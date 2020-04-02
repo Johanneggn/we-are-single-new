@@ -1,31 +1,44 @@
 <div class="show-event">
   <div class="container-wrap">
-    <h1 class="pl-4 py-4"><%= @event.title %></h1>
+    <h1 class="pl-5 py-4"><%= @event.title %></h1>
     <div class="d-flex">
-      <div class="col-md-6">
+      <div class="col-md-5">
         <% if @event.kind == "Soirée" %>
           <div class="photo-event-show">
             <%= image_tag("photo-event-party.jpg", crop: :thumb, class: "photo-show-event mx-3") %>
           </div>
         <% else %>
         <div class="photo-event-show">
-          <%= image_tag("photo-event-other.jpg", crop: :thumb, class: "photo-show-event mx-3") %>
+          <%= image_tag("photo-event-other.jpg", crop: :fill, class: "photo-show-event mx-3") %>
         </div>
         <% end %>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-7 pt-3">
         <div class="info-show-event mx-5">
           <p><i class="fas fa-map-marker-alt pr-2 pt-2"></i> <%= @event.address %></p>
-          <p><%= @event.price %> €</p>
+          <div class="d-flex">
+            <i class="far fa-credit-card pt-2 pr-2"></i>
+            <p><%= @event.price %> €</p>
+          </div>
           <% if @event.start_date == @event.end_date %>
-            <p><%= l(@event.start_date, format: '%d %B %Y') %></p>
+            <div class="d-flex">
+              <i class="fas fa-calendar-alt pt-2 pr-2"></i>
+              <p><%= l(@event.start_date, format: '%d %B %Y') %></p>
+            </div>
           <% else %>
-            <p><%= l(@event.start_date, format: '%d %B') %> - <%= l(@event.end_date, format: '%d %B %Y') %></p>
+            <div class="d-flex">
+              <i class="fas fa-calendar-alt pt-2 pr-2"></i>
+              <p><%= l(@event.start_date, format: '%d %B') %> - <%= l(@event.end_date, format: '%d %B %Y') %></p>
+            </div>
           <% end %>
+          <div class="d-flex">
+            <i class="far fa-clock pt-2 pr-2"></i>
+            <p><%= l(@event.start_time, format: '%k : %M') %> - <%= l(@event.end_time, format: '%k : %M') %></p>
+          </div>
           <p><%= @event.description %></p>
           <div class="d-flex align-items-center justify-content-center">
             <div class="align-items-center justify-content-center">
-            <p class="subscribe-button p-1 mt-4">Je veux m'inscrire</p>
+            <a class="subscribe-button p-1 mt-4" href="<%= @event.link %>">Je m'inscris</a>
             </div>
           </div>
         </div>

@@ -31,6 +31,8 @@ event_2 = Event.new(title: 'Cours de Salsa',
   start_date: '2020-04-15',
   end_date: '2020-04-15',
   price: 30,
+  start_time: "13:30",
+  end_time: "17:30",
   link: "https://weezevent.com/fr/")
 event_2.user = johanne
 event_2.save!

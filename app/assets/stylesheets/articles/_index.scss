@@ -2,6 +2,10 @@
   border: 1px solid $light-grey;
 }
 
+.list-article:hover {
+  opacity: 0.8;
+}
+
 .all-index-articles {
   background-color: $light-grey;
   min-height: 75vh;
@@ -10,4 +14,12 @@
 .list-index-articles {
   background-color: white;
   border-radius: 10px;
+}
+
+.lien-show-article:hover {
+  text-decoration: none;
+}
+
+.card-event-index:hover {
+  opacity: 0.8;
 }

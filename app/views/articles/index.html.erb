@@ -1,24 +1,27 @@
 <div class="all-index-articles p-5">
-  <div class="list-index-articles">
+  <h1 class= "pb-3">Les actualités</h1>
+  <div class="list-index">
     <% @articles.each do |article| %>
-    <div class="list-article p-3">
-      <div class="d-flex">
-        <div class="col-md-2">
-          <%= cl_image_tag article.photo.key, crop: :thumb, width: 150, height: 150%>
+      <%= link_to article_path(article), class: "lien-show-article" do %>
+        <div class="list-article bg-white my-3">
+          <div class="d-flex">
+            <div class="col-md-2 p-0">
+              <%= cl_image_tag article.photo.key, crop: :thumb, width: 200, height: 150%>
 
-        </div>
-        <div class="col-md-7">
-          <div class="title-text-article">
-            <h2><%= article.title %></h2>
-            <p><%= article.description %></p>
+            </div>
+            <div class="col-md-8 py-3">
+              <div class="title-text-article">
+                <h2><%= article.title %></h2>
+                <p><%= article.description %></p>
 
+              </div>
+            </div>
+            <div class="col-md-2 py-3">
+              <p>publié le <%= l(article.created_at,format: '%d %B %Y') %></p>
+            </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <p>publié le <%= l(article.created_at,format: '%d %B %Y') %></p>
-        </div>
-      </div>
-    </div>
+      <% end %>
     <% end %>
   </div>
 </div>

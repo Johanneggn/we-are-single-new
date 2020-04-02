@@ -1,7 +1,7 @@
 <div class="all-index-articles p-5">
-  <div class="d-flex p-3">
-    <div class="col-md-11">
-      <h1 class="pl-4">Les actualités</h1>
+  <div class="d-flex py-3">
+    <div class="col-md-11 px-0">
+      <h1>Les actualités</h1>
     </div>
     <div class="col-md-1">
       <%= link_to new_article_path, class: "action-navbar" do %>
@@ -11,21 +11,21 @@
   </div>
   <div class="list-index-articles">
     <% @articles.each do |article| %>
-    <div class="list-article p-3">
+    <div class="list-article">
       <div class="d-flex">
-        <div class="col-md-2">
-          <%= cl_image_tag article.photo.key, crop: :thumb, width: 150, height: 150 %>
+        <div class="col-md-2 p-0">
+          <%= cl_image_tag article.photo.key, crop: :thumb, width: 200, height: 150 %>
         </div>
         <div class="col-md-6">
-          <div class="title-text-article">
+          <div class="title-text-article py-3">
             <h2><%= article.title %></h2>
             <p><%= article.description %></p>
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 py-3">
           <p>publié le <%= l(article.created_at,format: '%d %B %Y') %></p>
         </div>
-        <div class="col-md-2 d-flex justify-content-center">
+        <div class="col-md-2 d-flex justify-content-center py-2">
           <div class="update-index-event-user">
             <%= link_to user_events_path, class: "list-text-index" do  %>
               <i class="fas fa-pen p-3"></i>

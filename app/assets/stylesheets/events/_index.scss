@@ -7,10 +7,14 @@
 }
 .index-left {
   width: 60%;
+  background-color: $light-grey;
 }
 
 .index-right {
   width: 40%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .address-event i {
@@ -23,7 +27,3 @@
   padding-bottom: 40px;
 }
 
-.all-index-events {
-  background-color: $light-grey;
-  padding-bottom: 100px
-}

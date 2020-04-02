@@ -28,6 +28,17 @@ p {
   font-family: "Palanquin";
 }
 
+a {
+  letter-spacing: .1rem;
+  line-height: 30px;
+  color: $medium-grey;
+  font-family: "Palanquin";
+}
+
+a:hover {
+ text-decoration: none !important;
+}
+
 h1 {
   letter-spacing: .1rem;
   color: $dark-grey;
@@ -41,4 +52,12 @@ h2 {
   color: $medium-grey !important;
   font-family: "Convergence";
   font-size: 20px !important;
+}
+
+h3 {
+  letter-spacing: .1rem;
+  color: $medium-grey !important;
+  font-family: "Convergence";
+  font-size: 20px !important;
+  font-size: 600;
 }

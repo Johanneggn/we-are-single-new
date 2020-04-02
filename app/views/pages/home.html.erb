@@ -88,7 +88,7 @@
                 <% if event.kind == "Soirée" %>
                   <%= image_tag("photo-event-party.jpg", crop: :thumb, width: 400, height: 220, class: "photo-event-index") %>
                 <% else %>
-                  <%= image_tag("photo-event-other.jpg", crop: :thumb, width: 400, height: 220, class: "photo-event-index") %>
+                  <%= image_tag("photo-event-other.jpg", crop: :fill, width: 400, height: 220, class: "photo-event-index") %>
                 <% end %>
                   <div class="info-card-event">
                     <p class="index-title-event text-center"><%= event.title %></p>
