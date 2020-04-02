@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  letter-spacing: .1rem;
+  line-height: 30px;
+  color: $medium-grey !important;
+}
+
+i {
+  text-decoration: none !important;
+}
+
+i:hover {
+  text-decoration: none !important;
+}
+
+p {
+  letter-spacing: .1rem;
+  line-height: 30px;
+  color: $medium-grey;
+  font-family: "Palanquin";
+}
+
+h1 {
+  letter-spacing: .1rem;
+  color: $dark-grey;
+  font-family: "Palanquin";
+  font-weight: 600 !important;
+  font-size: 28px !important;
+}
+
+h2 {
+  letter-spacing: .1rem;
+  color: $medium-grey !important;
+  font-family: "Convergence";
+  font-size: 20px !important;
+}

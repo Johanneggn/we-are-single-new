@@ -1,0 +1,34 @@
+.subscribe-button {
+  border: 1px solid $pink;
+  border-radius: 10px;
+  height: 40px;
+  width: 250px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: $pink;
+  color: white !important;
+}
+
+.subscribe-button i {
+  font-size: 20px;
+}
+
+.photo-show-event {
+  height: 450px;
+  width: 650px;
+  border-radius: 10px !important;
+}
+
+
+
+.show-event {
+  padding: 50px;
+  background-color: $light-grey;
+}
+
+.container-wrap {
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}

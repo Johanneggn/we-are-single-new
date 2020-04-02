@@ -1,0 +1,58 @@
+.container-index-event {
+  text-align: left;
+}
+
+.list-index-event:hover p{
+  color: $pink !important;
+}
+
+.list-index-event:hover i{
+  color: $pink !important;
+}
+.card-event {
+  // position: relative;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px !important;
+  width: 270px;
+  padding-right: 10px;
+  height: 350px;
+}
+
+.card-event:hover {
+  opacity: 0.7;
+}
+
+.photo-event-index {
+  height: 200px;
+  width: 270px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+.e-mail-event {
+ border-bottom: 1px solid $lm-grey;
+}
+
+.size-progress {
+  font-size: 13px !important;
+}
+
+.index-title-event {
+  color: $medium-grey ;
+  font-size: 20px !important;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.link-to-show:hover {
+  text-decoration: none;
+}
+
+.photo-event {
+  height: 200px;
+  width: 330px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}

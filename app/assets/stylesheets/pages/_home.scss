@@ -1,1 +1,71 @@
-// Specific CSS for your home-page
+.photo-cover {
+  width: 100vw;
+  height: 500px;
+  background-image: linear-gradient(rgba(250,250,250,.4), rgba(250,250,250,.1)), asset-url('photo-cover-couple.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.title-home-page h1 {
+  color: white;
+  font-family: "Lateef";
+  font-size: 60px;
+}
+
+.title-home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-soirees-home-page {
+  background-color: $light-grey;
+}
+
+.photo-soiree {
+  text-align: left;
+  justify-content: left;
+}
+
+.photo-presentation {
+  text-align: center;
+}
+
+.location-event {
+  color: $medium-grey;
+}
+
+.catch-phrase {
+  font-size: 60px !important;
+  color: white !important;
+}
+
+.icone-presentation i {
+  font-size: 36px;
+  background-color: $pink;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+  margin-top: -40px;
+}
+
+.picto-30 {
+  font-size: 32px;
+  background-color: $pink;
+  padding: 22px 10px;
+  border-radius: 50%;
+  color: white !important;
+  // font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  margin-bottom: 0px !important;
+}
+
+.picto-position {
+  padding: 20px 27px !important;
+}

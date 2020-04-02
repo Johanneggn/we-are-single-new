@@ -1,0 +1,47 @@
+.event-list-user-index {
+  border: 1px solid $medium-grey;
+  height: 90px;
+  margin: 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.list-text-index:hover {
+  text-decoration: none !important;
+  color: $medium-grey;
+}
+
+.list-text-index i {
+  color: $medium-grey;
+}
+
+.user-index-events {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $light-grey;
+}
+
+.list-client-newsletter {
+  border: 1px solid $medium-grey;
+  margin: 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.info-client {
+  border-bottom: 1px solid $medium-grey;
+}
+
+.event-list-user-index {
+  background-color: white;
+}
+
+.add-event {
+  font-size: 28px !important;
+  background-color: $pink;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  padding-top: 2px;
+}
