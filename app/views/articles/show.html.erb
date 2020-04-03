@@ -1,2 +1,15 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="all-article p-5 m-0">
+  <div class="container-show-article bg-white">
+    <h1 class="p-5"><%= @article.title %></h1>
+    <div class="d-flex bg-white">
+      <div class="photo-show-article px-4 pb-5">
+        <%= cl_image_tag @article.photo.key, crop: :thumb, width: 500, height: 500 %>
+
+        <p>publié le <%= l(@article.created_at, format: '%d %B %Y') %> - écrit par <%= @article.user.first_name %></p>
+      </div>
+      <div class="text-show-article px-4 pb-5">
+        <p><%= @article.text %></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,8 +2,8 @@
   border: 1px solid $light-grey;
 }
 
-.list-article:hover {
-  opacity: 0.8;
+.list-article:hover h2 {
+  color: $pink !important;
 }
 
 .all-index-articles {
