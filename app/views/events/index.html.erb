@@ -1,16 +1,17 @@
 <div class="d-flex all-index-events">
   <div class="index-left py-5">
     <% if @eventsall.count == 0 %>
-      <h1 class="title-index-page">Les évènements</h1>
+      <h1 class="title-index-page pl-5 mb-5">Les évènements</h1>
       <p class="title-index-page">Il n'y a pas d'évènement actuellement.</p>
     <% else %>
       <div class="nom">
-        <h1 class="title-index-page">Les évènements</h1>
+        <h1 class="title-index-page pl-5 mb-5">Les évènements</h1>
         <div class="d-flex">
-          <div class="row d-flex justify-content-center">
+          <div class="row w-100 px-5">
             <% @eventsall.each do |event| %>
+            <% if event.start_date > Date.today %>
               <%= link_to event_path(event), class: "link-to-show" do  %>
-                <div class="card-event-index mx-2 mb-4">
+                <div class="card-event-index mx-3 mb-4">
                   <% if event.kind == "Soirée" %>
                     <%= image_tag("photo-event-party.jpg", crop: :thumb, class: "photo-event") %>
                   <% else %>
@@ -31,7 +32,9 @@
                   </div>
                 </div>
               <% end %>
+              <% end %>
             <% end %>
+
           </div>
         </div>
       </div>

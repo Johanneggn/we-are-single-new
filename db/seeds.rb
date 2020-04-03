@@ -20,7 +20,17 @@ johanne.save!
 
 puts "Seeding events..."
 # Evenement
-event_1 = Event.new(title: 'Soirée', description: 'Soirée conviviale blablabla', kind: 'Soirée', address: '9 rue lulli, Brest', start_date: '2020-03-31', end_date: '2020-04-01', link: "https://weezevent.com/fr/")
+event_1 = Event.new(
+  title: 'Soirée',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  kind: 'Soirée',
+  address: '9 rue lulli, Brest',
+  start_date: '2020-03-31',
+  end_date: '2020-04-01',
+  start_time: '19:00',
+  end_time: '01:00',
+  price: 25,
+  link: "https://weezevent.com/fr/")
 event_1.user = johanne
 event_1.save!
 
@@ -37,11 +47,30 @@ event_2 = Event.new(title: 'Cours de Salsa',
 event_2.user = johanne
 event_2.save!
 
-event_3 = Event.new(title: 'Randonnée', description: 'Randonnée conviviale blablabla', kind: 'Autre', address: '12 rue Jacques bossuet, Quimper', start_date: '2020-04-20', end_date: '2020-04-20', link: "https://weezevent.com/fr/")
+event_3 = Event.new(title: 'Randonnée',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  kind: 'Autre',
+  address: '12 rue Jacques bossuet, Quimper',
+  start_date: '2020-04-20',
+  end_date: '2020-04-20',
+  start_time: '10:00',
+  end_time: '16:00',
+  price: 10,
+  link: "https://weezevent.com/fr/")
 event_3.user = johanne
 event_3.save!
 
-event_4 = Event.new(title: 'Soirée', description: 'Soirée conviviale blablabla', kind: 'Soirée', address: '2 rue Clément Marot, Brest', start_date: '2020-04-20', end_date: '2020-04-20', link: "https://weezevent.com/fr/")
+event_4 = Event.new(
+  title: 'Soirée',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  kind: 'Soirée',
+  address: '2 rue Clément Marot, Brest',
+  start_date: '2020-04-20',
+  end_date: '2020-04-20',
+  start_time: '19:00',
+  end_time: '23:30',
+  price: 25,
+  link: "https://weezevent.com/fr/")
 event_4.user = johanne
 event_4.save!
 

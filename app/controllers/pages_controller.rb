@@ -3,6 +3,9 @@ class PagesController < ApplicationController
 
   def home
     @eventsall = Event.all
-    @eventsthird = @eventsall[0..2]
+    @eventsthird = @eventsall.
+      where('events.start_date >= ?', Date.today).
+      order("events.start_date").
+      first(3)
   end
 end

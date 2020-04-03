@@ -12,22 +12,23 @@
 .card-event {
   // position: relative;
   background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 10px !important;
   width: 270px;
   padding-right: 10px;
   height: 350px;
 }
 
-.card-event:hover {
-  opacity: 0.8;
+.card-event:hover h3{
+  color: $pink !important;
+}
+
+.display-index-events:hover p {
+  color: $pink !important;
 }
 
 .photo-event-index {
   height: 200px;
   width: 270px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 5px;
   object-fit: cover;
 }
 .e-mail-event {
@@ -52,7 +53,11 @@
 .photo-event {
   height: 200px;
   width: 330px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 5px;
   object-fit: cover;
 }
+
+.login {
+  min-height: 70vh;
+}
+

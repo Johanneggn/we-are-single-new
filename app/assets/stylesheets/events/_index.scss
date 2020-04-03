@@ -1,18 +1,17 @@
 .card-event-index {
   background-color: white;
-  border-radius: 10px !important;
+
   width: 330px;
   height: 350px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.08);
 }
 .index-left {
   width: 60%;
-  background-color: $light-grey;
+  background-color: white;
 }
 
 .index-right {
   width: 40%;
-  background-color: white;
+  background-color: $light-grey;
   display: flex;
   justify-content: center;
 }
@@ -23,7 +22,10 @@
 }
 
 .title-index-page {
-  padding-left: 100px;
-  padding-bottom: 40px;
+
+}
+
+.card-event-index:hover h3 {
+  color: $pink !important;
 }
 

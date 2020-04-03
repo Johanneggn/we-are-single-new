@@ -77,11 +77,12 @@
   </div>
   <div class="list-events-home-page">
     <h1 class="pb-4 px-5 my-0">Les évènements</h1>
-    <div class="container-index-event d-flex row mb-5 justify-content-center">
+    <div class="container-index-event d-flex row mb-5 ml-4">
       <% if @eventsall.count == 0 %>
         <p class="px-5">Il n'y a pas d'évènement actuellement.</p>
       <% else %>
         <% @eventsthird.each do |event| %>
+          <% if event.start_date > Date.today %>
           <div class="col-md-4 col-xl-3">
             <%= link_to event_path(event), class: "link-to-show" do  %>
               <div class="card-event">
@@ -91,7 +92,7 @@
                   <%= image_tag("photo-event-other.jpg", crop: :fill, width: 400, height: 220, class: "photo-event-index") %>
                 <% end %>
                   <div class="info-card-event">
-                    <p class="index-title-event text-center"><%= event.title %></p>
+                    <h3 class="text-center"><%= event.title %></h3>
                     <div class="location-event d-flex">
                       <i class="fas fa-map-marker-alt px-2 pt-2"></i><p class="m-0"><%= event.address %></p>
                     </div>
@@ -106,6 +107,7 @@
               </div>
             <% end %>
           </div>
+          <% end %>
         <% end %>
         <%= link_to events_path, class: "link-to-show" do  %>
           <div class="card-event d-flex align-items-center justify-content-center">
