@@ -98,9 +98,15 @@
                     </div>
                     <div class="date-event d-flex">
                       <% if event.start_date == event.end_date %>
-                        <p class="pl-4"><%= l(event.start_date, format: '%d %B %Y') %></p>
+                        <div class="d-flex">
+                          <i class="fas fa-calendar-alt pt-2 pl-2"></i>
+                          <p class="pl-2"><%= l(event.start_date, format: '%d %B %Y') %></p>
+                        </div>
                       <% else %>
-                        <p class="pl-4"><%= l(event.start_date, format: '%d %B') %> - <%= l(event.end_date, format: '%d %B %Y') %></p>
+                        <div class="d-flex">
+                          <i class="fas fa-calendar-alt pt-2 pl-2"></i>
+                          <p class="pl-2"><%= l(event.start_date, format: '%d %B') %> - <%= l(event.end_date, format: '%d %B %Y') %></p>
+                        </div>
                       <% end %>
                     </div>
                   </div>

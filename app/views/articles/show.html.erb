@@ -1,6 +1,6 @@
 <div class="all-article p-5 m-0">
   <div class="container-show-article bg-white">
-    <h1 class="p-5"><%= @article.title %></h1>
+    <h1 class="p-4"><%= @article.title %></h1>
     <div class="d-flex bg-white">
       <div class="photo-show-article px-4 pb-5">
         <%= cl_image_tag @article.photo.key, crop: :thumb, width: 500, height: 500 %>
